@@ -23,7 +23,10 @@
             <a href="#history"><p>Histoire</p></a>
             <a href="#palmares"><p>Palmares</p></a>
             <a href="#equipes"><p>Equipe</p></a>
-            <a href=""><p>Connexion</p></a>
+            <a href="./shop.php"><p>Boutique</p></a>
+            <a href="./connexion.php"><p>Connexion</p></a>
+            <a href="./inscription.php"><p>Inscription</p></a>
+            
         </div>
     </nav>
     <div class="Accueil" id="accueils">
@@ -48,7 +51,6 @@
 
             </div>
         </div>
-        <img class="fond" src="./img/carrousels background.png">
     </div>
     <div class="Histoire" id="history">
         <div class="txt-histoire">

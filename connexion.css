@@ -1,115 +1,129 @@
 body {
-    margin: 0px;
-    overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+  width: 100vw;
+    height: 100vh;
+    display: flex;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
 }
 
 
 
+#inscription-form {
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 20px;
+  
+
+}
 
 
 h1 {
-    font-size: 32px;
-    line-height: 100%;
-    margin-left: 5px;
-  }
-  
-  .titre {
-    padding: 35px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-  }
-  
-  h3 {
-   
-    font-size: 24px;
-    line-height: 150%;
-    width: 442px;
-    margin-left: 35px;
-  }
+  font-size: 32px;
+  line-height: 100%;
+  margin-left: 35px;
+}
+
+.titre {
+  padding: 35px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+h3 {
+
+  font-size: 24px;
+  line-height: 150%;
+  width: 442px;
+  margin-left: 35px;
+}
 
 
 p {
 
-    font-size: 16px;
-    line-height: 100%;
-    margin-top: 20px;
-  }
-  
-  form {
-    margin-left: 35px;
-    margin-top: 30px;
-  }
-  
-  label {
-    margin-bottom: 10px;
-    margin-top: 5px;
+  font-size: 16px;
+  line-height: 100%;
+  margin-top: 20px;
+  margin-left: 35px;
+}
 
-    font-size: 16px;
-    line-height: 100%;
-  }
-  
-  #password {
-    width: 420px;
-    height: 55px;
-    border: #B8D6BF 1px solid;
-    background-color: white;
-    margin-bottom: 10px;
-    border-radius: 8px;
-  }
-  
-  #email {
-    width: 420px;
-    height: 55px;
-    border: #B8D6BF 1px solid;
-    background-color: white;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  
-  button {
-    width: 200px;
-    height: 50px;
-    border: 1px solid #029664;
-    border-radius: 8px;
-    margin-right: 20px;
-    margin-top: 15px;
-  }
-  
-  #login {
-    color: white;
-    background-color: #029664;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-  }
-  
-  #Sign {
-    background-color: white;
-    color: #029664;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-  }
-  
-  input[type=checkbox] {
-    accent-color: #029664;
-  }
-  
-  #label-remember {
-    margin-right: 170px;
-  }
-  
-  a {
-    color: #029664;
-    text-decoration: none;
-  }
+form {
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+label {
+  margin-bottom: 10px;
+  margin-top: 5px;
+
+  font-size: 16px;
+  line-height: 100%;
+}
+
+#password {
+  width: 420px;
+  height: 55px;
+  border: #B8D6BF 1px solid;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+#email {
+  width: 420px;
+  height: 55px;
+  border: #B8D6BF 1px solid;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #029664;
+  border-radius: 8px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#login {
+  color: white;
+  background-color: #029664;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+#Sign {
+  background-color: white;
+  color: #029664;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+input[type=checkbox] {
+  accent-color: #029664;
+}
+
+#label-remember {
+  margin-right: 170px;
+}
+
+a {
+  color: #029664;
+  text-decoration: none;
+}

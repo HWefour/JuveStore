@@ -39,6 +39,7 @@ nav {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 
@@ -99,12 +100,7 @@ h2 {
     background-image: url(./img/Filip-Kostic-celebrates-his-23rd-minute-winner-350x250.jpg);
 }
 
-.fond {
-    width: 100vw;
-    position: absolute;
-    top: 80vh;
-    opacity: 0.8;
-}
+
 
 /* categorie histoire */
 .Histoire {
