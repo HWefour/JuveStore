@@ -1,10 +1,11 @@
 <?php
- session_start();
 
-if(!isset($_SESSION["estAdmin"])!=1 OR empty($_SESSION["estAdmin"])!=1){
+session_start();
+
+if(!isset($_SESSION["admin"]) OR empty($_SESSION["admin"])){
     header("location: connexion.php");
-
 } 
+
 
 require("commandes.php");
 
@@ -46,13 +47,19 @@ $mes_articles = affiche();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./crud.css">
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Lora&family=Noto+Sans+KR:wght@100&family=Raleway:ital,wght@1,200&display=swap"
+        rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./crud.css?v=<?=uniqid()?>">
+    <link rel="stylesheet" href="./navbar.css?v=<?=uniqid()?>">
     <title>Crud</title>
 </head>
 
 <body>
-    
+    <?php
+    include "navbarboot.php" ;
+    ?>
     <form method="POST" action="CRUD-Admin.php">
     <H1>AJOUT D'ARTICLE </h1>
         <div class="form-crud">
@@ -72,7 +79,7 @@ $mes_articles = affiche();
                 <label for="exampleInputPassword1" class="form-label">Description</label>
                 <textarea class="form-control" name="desc" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" name="ajouter">Ajoutez article</button>
+            <button type="submit" class="btn btn-warning" name="ajouter">Ajoutez article</button>
         </div>
     </form>
     <form method="POST" action="CRUD-Admin.php">
@@ -82,7 +89,7 @@ $mes_articles = affiche();
                 <label for="exampleInputEmail1" class="form-label">ID article</label>
                 <input type="number" class="form-control" id="id-produit" name="idprod" required>
             </div>
-            <button type="submit" class="btn btn-primary" name="supprimer">Supprimer</button>
+            <button type="submit" class="btn btn-warning" name="supprimer">Supprimer</button>
         </div>
         <div class="affichage">
             <?php foreach ($mes_articles as $article) :  ?>

@@ -1,11 +1,10 @@
 <?php
 session_start();
-
 include "commandes.php" ;
 
-if($_SESSION['admin'] == 1){
+if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
     header('Location: CRUD-Admin.php');
-} else {
+} elseif(isset($_SESSION['admin'])) {
     header('Location: shop.php');
 }
 
@@ -23,15 +22,18 @@ if (isset($_POST["connexion"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./connexion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Lora&family=Noto+Sans+KR:wght@100&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./navbar.css?v=<?=uniqid()?>">
+    <link rel="stylesheet" href="./connexion.css?v=<?=uniqid()?>">
     <title>Connexion</title>
 </head>
 
 <body>
-
+<?php
+    include "navbarboot.php" ;
+    ?>
     <div id="inscription-form">
         <h1>Connexion</h1>
         <h3>Bienvenue dans JuveWorld</h3>

@@ -63,7 +63,6 @@ function getUser($email, $pswrd, $estAdmin = 0){
     if(require("connexionBDD.php"))
     {
         $sql = "SELECT * FROM compte WHERE email= '$email' AND password= '$pswrd';";
-        var_dump($sql);
         $req = $access -> prepare($sql);
         // $req -> execute(array($email, $pswrd));
         $req -> execute();
@@ -79,7 +78,7 @@ function getUser($email, $pswrd, $estAdmin = 0){
             
             
         }else {
-            echo "votre mdp ou pseudo est incorrect";
+            echo "votre mdp ou pseudo est incorrect"; // creer alert pour dire mdp erronee
         }
         $req -> closeCursor();
  }

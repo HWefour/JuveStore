@@ -26,6 +26,8 @@
             <a href="./shop.php"><p>Boutique</p></a>
             <a href="./connexion.php"><p>Connexion</p></a>
             <a href="./inscription.php"><p>Inscription</p></a>
+            <a href="./deconnexion.php"><p>Deconnexion</p></a>
+            <a href="./CRUD-Admin.php"><p>Admin</p></a>
             
         </div>
     </nav>

@@ -8,6 +8,8 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
+  background-color: black;
+  color: white;
 }
 
 
@@ -16,7 +18,7 @@ body {
   margin: auto;
   height: fit-content;
   width: fit-content;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 30px;
   padding: 20px;
   
@@ -88,7 +90,7 @@ label {
 button {
   width: 200px;
   height: 50px;
-  border: 1px solid #029664;
+  border: 1px solid #e39b0b;
   border-radius: 8px;
   margin-right: 20px;
   margin-top: 15px;
@@ -97,7 +99,7 @@ button {
 
 #login {
   color: white;
-  background-color: #029664;
+  background-color: #e39b0b;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -107,7 +109,7 @@ button {
 
 #Sign {
   background-color: white;
-  color: #029664;
+  color: #e39b0b;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -116,7 +118,7 @@ button {
 }
 
 input[type=checkbox] {
-  accent-color: #029664;
+  accent-color: #e39b0b;
 }
 
 #label-remember {
@@ -124,6 +126,6 @@ input[type=checkbox] {
 }
 
 a {
-  color: #029664;
+  color: #e39b0b;
   text-decoration: none;
 }

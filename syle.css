@@ -11,7 +11,7 @@ body {
 }
 
 /* barre de navigation */
-nav {
+/* nav {
     position: fixed;
     right: 0;
     left: 0;
@@ -28,7 +28,7 @@ nav {
 .logoHome {
     margin-top: 7px;
 }
-
+ */
 /*section accueil */
 .Accueil {
     background-image: url(./img/973501.jpg);

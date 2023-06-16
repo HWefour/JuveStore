@@ -1,0 +1,26 @@
+nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.logoHome {
+    margin-top: 7px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
