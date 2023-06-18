@@ -83,4 +83,34 @@ function getUser($email, $pswrd, $estAdmin = 0){
         $req -> closeCursor();
  }
 }
+
+
+function modifier($image, $nom, $prix, $description, $id)
+{
+  if(require("connexionBDD.php"))
+  {
+    $req = $access->prepare("UPDATE shop SET `image` = ?, nom = ?, prix = ?, description = ? WHERE id=?");
+
+    $req->execute(array($image, $nom, $prix, $description, $id));
+
+    $req->closeCursor();
+  }
+}
+
+function afficherUnProduit($id)
+{
+	if(require("connexionBDD.php"))
+	{
+		$req=$access->prepare("SELECT * FROM shop WHERE id=?");
+
+        $req->execute(array($id));
+
+        $data = $req->fetchAll(PDO::FETCH_OBJ);
+
+        return $data;
+
+        $req->closeCursor();
+	}
+}
+
 ?>

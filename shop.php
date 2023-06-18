@@ -23,6 +23,7 @@ $mes_articles = affiche();
   <?php
   include "navbarboot.php";
   ?>
+  
   <?php foreach ($mes_articles as $article) :  ?>
     <div class="card" style="width: 18rem;">
       <img src="<?= $article->image ?>" class="card-img-top" alt="...">
@@ -30,6 +31,7 @@ $mes_articles = affiche();
         <h5 class="card-title"> <?= $article->nom ?> </h5>
         <p class="card-text"><?= $article->description ?></p>
         <a href="#" class="btn btn-warning">Acheter</a>
+        <H5 ><a class="modif"href="CRUD-Admin.php?id=<?= $article->id ?>">Modifier </a></h5>
       </div>
       <div class="card-footer text-body-secondary">
         <?= $article->prix ?>$

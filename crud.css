@@ -14,6 +14,7 @@ body {
     font-weight: 400;
     color: white;
     background-color: black;
+    flex-wrap: wrap;
 
 }
 
@@ -26,6 +27,9 @@ body {
 
 .form-crud-suppr {
     margin-bottom: 20%;
+}
+.form-crud-modif{
+
 }
 
 

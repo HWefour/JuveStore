@@ -1,7 +1,7 @@
 body {
     background-color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -11,8 +11,22 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     color: white;
+    flex-wrap: wrap;
 }
 
 .card{
     margin-top: 11%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+h5 {
+    
+    font-size: larger;
+    font-weight: 700;
+}
+.modif{
+    color: blue;
+}
+h1 {
+    color: white;
 }

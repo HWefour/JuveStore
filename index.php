@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Lora&family=Noto+Sans+KR:wght@100&family=Raleway:ital,wght@1,200&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="./navbar.css?v=<?=uniqid()?>">
 
     <title>Accueil</title>
 </head>
