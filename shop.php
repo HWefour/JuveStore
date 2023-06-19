@@ -30,7 +30,7 @@ $mes_articles = affiche();
       <div class="card-body">
         <h5 class="card-title"> <?= $article->nom ?> </h5>
         <p class="card-text"><?= $article->description ?></p>
-        <a href="#" class="btn btn-warning">Acheter</a>
+        <a href="#" class="btn btn-warning" onclick="ajouterPanier(<?=$article->id?>);">Acheter</a>
         <H5 ><a class="modif"href="CRUD-Admin.php?id=<?= $article->id ?>">Modifier </a></h5>
       </div>
       <div class="card-footer text-body-secondary">
@@ -40,7 +40,7 @@ $mes_articles = affiche();
   <?php endforeach; ?>
 
 
-
+<script src="./script.js"></script>
 </body>
 
 </html>

@@ -37,6 +37,7 @@
             <h1>Juventus</h1>
             <h3>Le plus grand club Italien</h3>
         </div>
+        
         <div class="Cards">
             <div class="card" id="card1">
 

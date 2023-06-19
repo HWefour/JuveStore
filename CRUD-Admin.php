@@ -6,12 +6,15 @@ if (!isset($_SESSION["admin"]) or empty($_SESSION["admin"])) {
     header("location: connexion.php");
 }
 require("commandes.php");
+
+
+
 if(isset($_GET['id'])){
     
     if(!empty($_GET['id']) OR is_numeric($_GET['id']))
     {
         $id = $_GET['id'];
-        $modif_article = afficherUnProduit($id);
+        $modif_article =  afficherUnProduit($id);
     }
 }
 
@@ -25,10 +28,10 @@ if (isset($_POST['valider'])) {
             $prix = htmlspecialchars(strip_tags($_POST['prix']));
             $desc = htmlspecialchars(strip_tags($_POST['desc']));
 
-            if (isset($_GET['id'])) {
+            if (isset($_POST['id'])) {
 
-                if (!empty($_GET['id']) or is_numeric($_GET['id'])) {
-                    $id = $_GET['id'];
+                if (!empty($_POST['id']) or is_numeric($_POST['id'])) {
+                    $id = $_POST['id'];
                 }
             }
 
@@ -148,11 +151,14 @@ $mes_articles = affiche();
                 <?php endforeach; ?>
         </div>
     </form>
-    <?php foreach ($modif_article as $article): ?>
+    <?php
+    if(!empty($modif_article)) {
+    foreach ($modif_article as $article): ?>
 
         <form method="POST" action="CRUD-Admin.php">
             <h1>Modifier</h1>
             <div class="form-crud-modif">
+                <input type="hidden" name="id" value="<?= $article->id ?>" required>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">L'image du produit</label>
                     <input type="name" class="form-control" name="image" value="<?= $article->image ?>" required>
@@ -177,7 +183,8 @@ $mes_articles = affiche();
             </div>
         </form>
 
-    <?php endforeach; ?>
+    <?php endforeach; 
+    } ?>
 </body>
 
 </html>

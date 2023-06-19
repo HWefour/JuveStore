@@ -120,7 +120,7 @@ function afficherEquipe() {
             palmares.appendChild(divEquipe);
 
             let logoEquipe = document.createElement('img');
-            logoEquipe.setAttribute('class' , 'img-ekp');
+            logoEquipe.setAttribute('class', 'img-ekp');
             logoEquipe.src = data.team.logo;
             divEquipe.appendChild(logoEquipe);
             console.log(logoEquipe);
@@ -207,31 +207,31 @@ function createDom(data) {
     palmares.appendChild(divJoueur);
 
     let joueurCard = document.createElement('div');
-    joueurCard.setAttribute('class' , 'joueurCard');
+    joueurCard.setAttribute('class', 'joueurCard');
     divJoueur.appendChild(joueurCard);
 
     let photo = document.createElement('img');
-    photo.setAttribute('class' ,'img-joueurs');
+    photo.setAttribute('class', 'img-joueurs');
     photo.src = data.player.photo;
     joueurCard.appendChild(photo);
 
     let jName = document.createElement("h4");
-    jName.setAttribute('class' ,'p-joueurs');
+    jName.setAttribute('class', 'p-joueurs');
     jName.textContent = `Nom : ${data.player.name}`;
     joueurCard.appendChild(jName);
 
     let age = document.createElement('h4');
-    age.setAttribute('class' ,'p-joueurs');
+    age.setAttribute('class', 'p-joueurs');
     age.textContent = `Age : ${data.player.age}`;
     joueurCard.appendChild(age);
 
     let nationalite = document.createElement('h4');
-    nationalite.setAttribute('class' ,'p-joueurs');
+    nationalite.setAttribute('class', 'p-joueurs');
     nationalite.textContent = `Pays : ${data.player.nationality}`
     joueurCard.appendChild(nationalite);
 
     let poids = document.createElement('h4');
-    poids.setAttribute('class' ,'p-joueurs');
+    poids.setAttribute('class', 'p-joueurs');
     poids.textContent = `Poid : ${data.player.weight}`;
     joueurCard.appendChild(poids);
 }
@@ -241,10 +241,33 @@ function afficherJoueurs() {
     fetch('joueurs.json')
         .then(response => response.json())
         .then(data => {
-            for (i =0 ; i< data.length ; i++){
-                createDom(data[i]) ;
+            for (i = 0; i < data.length; i++) {
+                createDom(data[i]);
             }
         })
 }
 afficherJoueurs();
 
+async function ajouterPanier(idArticle) {
+
+    var formData = new FormData();
+
+    formData.append('ajouterPanier', 1);
+    formData.append('idShop', idArticle);
+
+    await fetch("./panier.php", {
+        method: "POST",
+        body: formData
+    })
+    .then((response) => response.json())
+    .then((result) => {
+        document.getElementById("icon").className = "";
+        document.getElementById("icon").className = result.icon + " stats-icon color";
+        document.getElementById("data").innerText = result.data;
+        document.getElementById("text").innerText = result.text;
+        var colors = document.getElementsByClassName('color');
+        for (var i = 0; i < colors.length; i++) {
+            colors[i].style.color = result.color;
+        }
+    });
+}
